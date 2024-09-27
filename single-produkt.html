@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single-produkter</title>
+    <script src="https://kit.fontawesome.com/3f51aff7a3.js" crossorigin="anonymous"></script>
+    <script type="module" src="javascript/burgermenu.js"></script>
+    <script type="module" src="javascript/single-produkt.js"></script>
+    <script src="javascript/item-counter.js" defer></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/single-produkt.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__top">
+            <img src="images/hifilogo.jpg" alt="logo">
+            <div class="header_div">
+                <form action="newsletter.html" method="get"> </form>
+                <label class="form__label" for="email"> </label>
+                <input class="navform" type="text" id="email" name="search" placeholder="Search entire store here">
+                <i class="fa-solid fa-magnifying-glass header_div_items"></i>
+                </form>
+                <i class="fa-solid fa-user "></i>
+                <a class="header_div_items" href="">account</a>
+                <i class="fa-solid fa-cart-shopping " id="shopping__cart-items__number-container"></i>
+                <a class="header_div_items" href="cart.html">cart</a>
+                <a href=""><i class="fa-solid fa-location-dot header_div_items"></i></a>
+                <a href=""><i class="fa-solid fa-phone header_div_items"></i></a>
+                <a href=""><i class="fa-solid fa-envelope header_div_items"></i></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav_bar">
+                <li> <a class="nav_bar_item" href="Forside.html">home</a></li>
+                <li> <a class="nav_bar_item" href="">about us</a></li>
+                <li> <a class="nav_bar_item" href="brandlist.html">brands</a></li>
+                <li> <a class="nav_bar_item" href="">blog</a></li>
+                <li> <a class="nav_bar_item" href="">events</a></li>
+                <li> <a class="nav_bar_item highlight" href="shop-frontpage.html">shop</a></li>
+                <li> <a class="nav_bar_item" href="">contact us</a></li>
+            </ul>
+        </nav>
+        <i role="button" id="xmark-nav" class="fa-solid fa-bars"></i>
+    </header>
+
+    <main id="single-produkt-main">
+        <div class="main__wrapper">
+            <p class="product-category-location" id="product-category-location"></p>
+            <img src="images/other/sale_img.png" alt="sale" class="product_category_commersial-img">
+            <div class="single__produkt-left__container-all">
+                <div class="single__produkt-left">
+                    <div class="single__produkt-left__container-image" id="image-product">
+                    </div>
+                    <div class="single__produkt-left__container-images" id="container-images">
+                        <p>MORE VIEWS</p>
+
+                    </div>
+
+                </div>
+                <div class="single__produkt-right">
+                    <p class="single__produkt-right__product-name" id="product-name"></p>
+                    <div class="single__produkt-right__product-price-wrapper">
+                        <p class="single__produkt-right__product-brand" id="product-brand"></p>
+                        <p class="single__produkt-right__product-price" id="product-price"></p>
+                    </div>
+                    <p class="single__produkt-right__product-description" id="product-description"></p>
+                    <div class="single__produkt-right__contaioner-buttons">
+                        <button>ASK A QUESTION</button>
+                        <button>PART EXCHAGE</button>
+                        <button>PAY BY FINANCE</button>
+                        <button>SEEN A BETTER PRICE?</button>
+                    </div>
+                    <div class="single__produkt-right__contaioner-finish" id="contaioner-finish">
+                    </div>
+                    <div class="single__produkt-right__contaioner-add_to_cart">
+                        <div class="single__produkt-right__contaioner-add_to_cart-wrapper">
+                            <div>
+                                <label for="number"
+                                    class="single__produkt-right__contaioner-add_to_cart-number__lable">Qty:</label>
+                                <input type="number" class="single__produkt-right__contaioner-add_to_cart-number__input"
+                                    value="1" min="1" max="9">
+                            </div>
+                            <div class="single__produkt-right__contaioner-add_to_cart__or">
+                                <button class="single__produkt-right__contaioner-add_to_cart__button"
+                                    id="add_to_cart__button">ADD TO CART</button>
+                                <p class="single__produkt-right__or-p">-OR-</p>
+                                <a href="cart.html" class="single__produkt-right__or-a" id="chech-out">
+                                    <img src="images/logo/paypal.png.png" alt="paypal">
+                                    Check Out
+                                </a>
+                                <p class="single__produkt-right__or-p__small">The safer, easier way to pay</p>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="single__produkt-right__table-additional_information ">
+                        <caption>ADDITIONAL INFORMATION</caption>
+                        <tbody class="single__produkt-right__table-tbody">
+                            <tr>
+                                <th scope="row">Manufacturer</th>
+                                <td id="table_td-manufacture"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Manufacturer link</th>
+                                <td id="table_td-manufacture-link"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">FREE WARRANTY</th>
+                                <td>3 Years</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">DILEVERY CHARGE</th>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">DILEVERY TIME</th>
+                                <td>1 -5 Working days</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CARD SURCHARGES</th>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="single__produkt-left__description">
+                <table>
+                    <caption class="single__produkt-left__description-caption">Description</caption>
+                    <tbody class="single__produkt-left__description-table">
+                        <tr>
+                            <th scope="row">Power Output (8 / 4 Ohm RMS)</th>
+                            <td>45 w / 60 w 10 Hz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Frequency Response</th>
+                            <td>70 kHz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total Harmonic Distortion</th>
+                            <td>0.08%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Damping Factor</th>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Input Sensitivity: mm</th>
+                            <td>2.2 mV / 47 kOhm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Input Sensitivity: mc</th>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Signal to Noise Ratio: MM / MC</th>
+                            <td>83 dB / X</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Input Sensitivity: High level</th>
+                            <td>200 mv / 20 kOhm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Input Sensitivity: Balanced high level</th>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Signal to Noise Ratio: High level</th>
+                            <td>102dB(2V input)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Input Sensitivity: Power Amp Direct IN</th>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Signal to Noise Ratio: Power Amp Direct IN</th>
+                            <td>X</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="single-produkt__call-wrapper">
+                <p>CALL US ABOUT THIS PRODUCT</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__left">
+            <div>
+                <p>HI-Fi Corner</p>
+                <p>Edinburg 2 Joppa Road EH15 2EU</p>
+                <p>Falkrik 14 Cow Wynd FK1 1PU</p>
+            </div>
+            <div class="footer__link">
+                <a class="border-right" href="">Returns & Refunds</a>
+                <a href="">Privicy Policy</a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__payment-icons-container">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+            </div>
+            <div class="footer__social-icons-container">
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

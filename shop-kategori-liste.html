@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kategori-liste</title>
+    <script src="https://kit.fontawesome.com/3f51aff7a3.js" crossorigin="anonymous"></script>
+    <script type="module" defer src="javascript/category-page.js"></script>
+    <script type="module" src="javascript/redirect.js"></script>
+    <script type="module" src="javascript/burgermenu.js"></script>
+    <script src="javascript/item-counter.js" defer></script>
+    
+    <link rel="stylesheet" href="css/shop-category.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__top">
+            <img src="images/hifilogo.jpg" alt="logo">
+            <div class="header_div">
+                <form  action="newsletter.html" method="get"> </form>
+                <label class="form__label" for="email"> </label>
+                <input class="navform" type="text" id="email" name="search" placeholder="Search entire store here" >
+                <i class="fa-solid fa-magnifying-glass header_div_items"></i>
+                </form>
+                <i  class="fa-solid fa-user "></i>
+                <a class="header_div_items" href="">account</a>
+                <i class="fa-solid fa-cart-shopping " id="shopping__cart-items__number-container"></i>
+                <a class="header_div_items" href="cart.html">cart</a>
+                <a href=""><i class="fa-solid fa-location-dot header_div_items"></i></a>
+                <a href=""><i class="fa-solid fa-phone header_div_items"></i></a>
+                <a href=""><i class="fa-solid fa-envelope header_div_items"></i></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav_list navbar">
+                <li> <a class="nav_list_item" href="Forside.html">home</a></li>
+                <li> <a class="nav_list_item" href="">about us</a></li>
+                <li> <a class="nav_list_item" href="brandlist.html">brands</a></li>
+                <li> <a class="nav_list_item" href="">blog</a></li>
+                <li> <a class="nav_list_item" href="">events</a></li>
+                <li> <a class="nav_list_item highlight" href="shop-frontpage.html">shop</a></li>
+                <li> <a class="nav_list_item" href="">contact us</a></li>
+            </ul>
+        </nav>
+        <i role="button" id="xmark-nav" class="fa-solid fa-bars"></i>
+    </header>
+    <main>
+        <div class="page-name">
+            <h4><span class="text-brown">home </span>/ All </h4>
+        </div>
+        <section id="category-page">
+            <section class="category-page__left">
+                <div class="category-page__left-category">
+                    <ul class="category-page__left_ul">
+                        <li class="category-page__left_ul_li" id="cd_players">cd players</li>
+                        <li class="category-page__left_ul_li" id="dvd_players">dvd players</li>
+                        <li class="category-page__left_ul_li" id="power_amplifiers">power amplifiers</li>
+                        <li class="category-page__left_ul_li" id="preamplifiers">pre amplifiers</li>
+                        <li class="category-page__left_ul_li" id="speakers">speakers</li>
+                        <li class="category-page__left_ul_li" id="turntables">turntables</li>
+                        <li class="category-page__left_ul_li" id="record_players">record players</li>
+                        <li class="category-page__left_ul_li" id="router_amplifier">router amplifier</li>
+                    </ul>
+                </div>
+                <div class="category-page__left-shop_by">
+                    <p class="category-page__left-headline">Shop by:</p>
+                    <p class="category-page__left-filter">Filter</p>
+                    <p class="category-page__left__p-shop_by-price">Price</p>
+                    <ul class="category-page__left__ul-shop_by-price" id="price-range">
+                        <li class="category-page__left__li-shop_by-price" data-min="0" data-max="799">£0 - £799</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="899" data-max="999">£899 - £999</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="1000" data-max="1499">£1.000 - £1.499</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="1500" data-max="1999">£1.500 - £1.999</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="2000" data-max="2999">£2.000 - £2.999</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="3000" data-max="3499">£3.000 - £3.499</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="3500" data-max="4999">£3.500 - £4.999</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="5000" data-max="7999">£5.000 - £7.999</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="8000" data-max="11999">£8.000 - £11.999</li>
+                        <li class="category-page__left__li-shop_by-price" data-min="12000" data-max="Infinity">£12.000 and above</li>
+                        </ul>
+                     <p class="category-page__left__p-shop_by-manufacturer">Manufacturer</p>
+                    <ul class="category-page__left__ul-shop_by-manufacturer">
+                        <li class="category-page__left__li-shop_by-manufacturer">arcam</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">astelland karm</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">atc</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">audiolab</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">avid</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">cord electronics</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">classe</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">rotel</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">technics</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">yammaha</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">quad</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">oppo</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">sennheiser</li>
+                        <li class="category-page__left__li-shop_by-manufacturer">marantz</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="category-page__mid">
+                <h3 class="category-page__heading uppercase">All</h3>
+                <div class="category-page__search">
+                    <form action="sort">
+                        <label for="sort">Sort by:</label>
+                        <select name="sort" id="sort-options">
+                            <option value="none"></option>
+                            <option value="lowest_price">Lowest Price</option>
+                            <option value="highest_price">Highest Price</option>
+                            <option id="sortbyname" value="name">Name</option>
+                        </select>
+                    </form>
+                    <section class="category-page__search-view_as">
+                        <p>View as:</p>
+                        <img src="images/other/grid_icon-gold.svg" alt="icon" class="grid_icon-gold">
+                        <img src="images/other/row_icon-white.svg" alt="icon" class="row_icon-white">
+                    </section>
+                    <section class="category-page__show">
+                        <form action="show">
+                            <label for="show">Show:</label>
+                            <select name="show" id="product-count">
+                                <option value="20">20</option>
+                                <option value="40">40</option>
+                                <option value="80">80</option>
+                                <option value="100">100</option>
+                            </select>
+                        </form>
+                    </section>
+                </div>
+                <div id="product-list" class="product-list"></div>
+            </section>
+            <section class="category-page__right">
+                <h4 class="text-brown" id="cursor">Manufacturer</h4>
+                <ul class="manufacturer-list">
+                    <li class="list uppercase">arcam</li>
+                    <li class="list uppercase">astelland karm</li>
+                    <li class="list uppercase">atc</li>
+                    <li class="list uppercase">audiolab</li>
+                    <li class="list uppercase">avid</li>
+                    <li class="list uppercase">cord electronics</li>
+                    <li class="list uppercase">classe</li>
+                    </ul>
+                    <ul id="extra-list">
+                    <li class="extra-list uppercase">rotel</li>
+                    <li class="extra-list uppercase">technics</li>
+                    <li class="extra-list uppercase">yammaha</li>
+                    <li class="extra-list uppercase">quad</li>
+                    <li class="extra-list uppercase">oppo</li>
+                    <li class="extra-list uppercase">sennheiser</li>
+                    <li class="extra-list uppercase">marantz</li>
+                </ul>
+                    <span class="view-all text-brown">View All</span>
+                
+            </section>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer__left">
+            <div>
+                <p>HI-Fi Corner</p>
+                <p>Edinburg 2 Joppa Road EH15 2EU</p>
+                <p>Falkrik 14 Cow Wynd FK1 1PU</p>
+            </div>
+            <div class="footer__link">
+                <a class="border-right" href="">Returns & Refunds</a>
+                <a href="">Privicy Policy</a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__payment-icons-container">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+            </div>
+            <div class="footer__social-icons-container">
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

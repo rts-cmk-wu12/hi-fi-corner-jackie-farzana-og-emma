@@ -1,0 +1,62 @@
+@import url(variabler.css);
+        * {
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        .footer__logo-container img {
+            color: white;
+            background: transparent;
+            max-width: 4em;
+            width: 100%;
+        }
+
+        footer {
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 200px;
+            background-color: var(--primary_hihglight);
+        }
+
+        .border-right {
+            padding: 0.5em;
+            border-right: 2px solid white;
+
+        }
+
+        .footer__left,
+        .footer__right {
+            display: flex;
+            gap: 2em;
+            align-items: center;
+        }
+
+        .footer__link a {
+            color: white;
+        }
+.footer__payment-icons-container,
+        .footer__social-icons-container {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:0.2em;
+        }
+        .footer__payment-icons-container i{
+            color:white;
+            font-size: 2.5em;
+        }
+
+        .footer__social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 50%;
+            border: 1px solid white;
+            height: 1.5em;
+            width: 1.5em;
+ }

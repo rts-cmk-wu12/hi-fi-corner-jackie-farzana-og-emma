@@ -1,0 +1,159 @@
+.background{
+    background-image: url(/images/background/speaker.jpg); 
+    background-size: cover;
+    height:100vh;
+}
+.backdrop{
+    background-color: rgba(3, 53, 9, 0.522);
+    height:100vh ;
+}
+.main_wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+.main_top{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2rem;
+}
+.main_top_header{
+    color: white;
+
+}
+.main_top_image--hifi_logo{
+    height: 9rem;
+    width: auto;
+}
+
+.main_bottom_container-white{
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main_bottom_container-gradiant{
+    background-color: black;
+    width: 50%;
+    padding: .5rem;
+}
+.main_bottom_container-width{
+
+    width: 80%;
+}
+.main_bottom_container-width p{
+    color: var(--primary_hihglight);
+    margin-bottom: 1rem;
+    font-size: .5rem;
+}
+.logo{
+    height: 1rem;
+    width: auto;
+    margin: .25rem;
+}
+
+.main_bottom_container-photo{
+    width: 50%;
+    background-image: url(/images/background/speaker_closeup_one.avif);
+    padding: .5rem; 
+}
+.main_bottom_container-photo h2{
+    color: var(--primary_hihglight);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+}
+.main_bottom_container-photo p{
+    color: white;
+    font-size: .5rem;
+    margin-bottom: 1rem;
+}
+.main_bottom_container-photo a{
+    color: var(--primary_hihglight);
+    font-size: .5rem;
+    text-decoration: underline;
+}
+.main_top_image--hifi_logo:hover{
+    transform: scale(1.1);
+}
+.main_top_image--hifi_logo{
+    transition: .3s;
+}
+
+.fa-bars{
+    display: none;
+}
+@media screen and (max-width:960px){
+    footer, .header__top{
+       display: none; 
+    }
+    .fa-bars{
+        display: none;
+    }
+}
+@media screen and (max-width:588px){
+    nav{
+        height: 100%;
+        position: fixed;
+        background-color: black;
+       display: grid;
+       align-items: center;
+       z-index: 10;
+       padding-top: 4%;
+    }
+    
+
+      /* height 100vh så den ul fylder hele siden(samme med width) */
+    nav ul {
+        display: none;
+justify-items: center;
+width: 100vw;
+margin-bottom: 34em;
+
+height: 100vh;
+
+    }
+
+    /* height 0 + og margin 10% så alle li passer ind i nav ul */
+    nav ul li{
+        grid-column: 1/-1;
+        height: 0;
+    
+
+    }
+
+/* vi bruger ID her så vi ik ender op med at de to javascripts og classes går ind over hindanden */
+    #xmark-nav{ 
+        display: grid;
+        position:fixed;
+            top: 5vw;
+            right: 5vw;
+            font-size: 2em;
+            z-index: 40;
+            color: orange;
+
+    }
+    .main_top{
+        display:block;
+        margin-top: 0;
+    }
+    .backdrop,.background{
+        
+        padding: 0;
+    }
+    .main_bottom_container-white{
+        padding: 0;
+    }
+    .background{
+        height: 100%;
+        margin-bottom: 0;
+    }
+  .main_top img{
+    display: none;
+  }
+}
+

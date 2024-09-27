@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/3f51aff7a3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script type="module" src="javascript/cart.js"></script>
+    <script type="module" src="javascript/burgermenu.js"></script>
+    <script src="javascript/item-counter.js" defer></script>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="header__top">
+                <img src="images/hifilogo.jpg" alt="logo">
+                <div class="header_div">
+                    <form  action="newsletter.html" method="get"> </form>
+                    <label class="form__label" for="email"> </label>
+                    <input class="navform" type="text" id="email" name="search" placeholder="Search entire store here" >
+                    <i class="fa-solid fa-magnifying-glass header_div_items"></i>
+                    </form>
+                    <i  class="fa-solid fa-user "></i>
+                    <a class="header_div_items" href="">account</a>
+                    <i class="fa-solid fa-cart-shopping " id="shopping__cart-items__number-container"></i>
+                    <a class="header_div_items" href="cart.html">cart</a>
+                    <a href=""><i class="fa-solid fa-location-dot header_div_items"></i></a>
+                    <a href=""><i class="fa-solid fa-phone header_div_items"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope header_div_items"></i></a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav_bar">
+                    <li> <a class="nav_bar_item" href="Forside.html">home</a></li>
+                    <li> <a class="nav_bar_item" href="">about us</a></li>
+                    <li> <a class="nav_bar_item" href="brandlist.html" >brands</a></li>
+                    <li> <a class="nav_bar_item" href="">blog</a></li>
+                    <li> <a class="nav_bar_item" href="">events</a></li>
+                    <li> <a class="nav_bar_item" href="shop-frontpage.html">shop</a></li>
+                    <li> <a class="nav_bar_item" href="">contact us</a></li>
+                </ul>
+            </nav>
+            <i role="button" id="xmark-nav" class="fa-solid fa-bars"></i>
+        </header>
+    
+        <main>
+            <div class="cart__container">
+                <div class="cart__container-items__list-wrapper" >
+                    <div class="items__container" id="items__container">
+                    </div>
+         
+                    <div class="cart__container-items__list-total__price__container">
+                        <p>Total</p>
+                        <div class="price__and__icon">
+                            <p>£</p>
+                            <p id="total__price"></p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="cart__container-pay-wrapper">
+                    <div class="cart__container-pay-container">
+                        <form action="payInfo" class="cart__form" id="form">
+                            <label for="text">First Name</label>
+                            <input type="text" class="inputInfo" onkeydown="return /[a-zA-Z]/i.test(event.key)" required>
+                            
+                            <label for="text">Last Name</label>
+                            <input type="text" class="inputInfo" onkeydown="return /[a-zA-Z]/i.test(event.key)" required>
+
+                            <label for="text">Adress</label>
+                            <input type="text" class="inputInfo" required>
+                           
+                            <label for="text">Postal Code</label>
+                            <input 
+                                type="text" 
+                                class="inputInfo"
+                                
+                                required>
+                            
+                            <label for="text">Town/City</label>
+                            <input type="text" class="inputInfo" onkeydown="return /[a-zA-Z]/i.test(event.key)" required>
+
+                            <label for="email">e-mail</label>
+                            <input type="email" class="inputInfo" required>
+                            
+                            <label for="text">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                class="inputInfo"  
+                                onkeydown="return i.test(event.key)"
+                                required>
+                            
+                            <label for="text">Card Number</label>
+                            <input type="text"  
+                            maxlength="16"
+                            min="16"
+                            placeholder="**** **** **** ****" 
+                            class="inputInfo" 
+                            required>
+                            
+                            <label for="text">valid Until</label>
+                            <input type="text" placeholder="Month/Year" class="inputInfo" required>
+                            
+                            <label for="text">CVV</label>
+                            <input type="text" placeholder="***" class="inputInfo" required>
+                            
+                            <label for="text">Card Holder</label>
+                            <input type="text" placeholder="Name and Surname on card"  class="inputInfo" onkeydown="return /[a-zA-Z]/i.test(event.key)" required>
+                            
+                            <button class="cart__container-pay-container-button">Buy</button>
+                            
+                        </form>
+                        
+    
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <dialog id="dialog" class="dialog">
+            <div class="dialog__wrapper">
+                <p>Thank you for your purchase</p>
+            </div>
+        </dialog>
+
+    </div>
+    
+    <footer>
+        <div class="footer__left">
+            <div>
+                <p>HI-Fi Corner</p>
+                <p>Edinburg 2 Joppa Road EH15 2EU</p>
+                <p>Falkrik 14 Cow Wynd FK1 1PU</p>
+            </div>
+            <div class="footer__link">
+                <a class="border-right" href="">Returns & Refunds</a>
+                <a href="">Privicy Policy</a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__payment-icons-container">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+            </div>
+            <div class="footer__social-icons-container">
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class=" footer__social-icon">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+.frontpage__pics{
+    display: grid;
+   
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    width: 1050px;
+    margin: 0 auto; 
+    
+}
+
+.frontpage__pics_box:hover{
+    transform: scale(1.17);
+}
+
+
+
+.frontpage__pics_box{
+    position: relative;
+    transition: .3s;
+    
+}
+.frontpage__pics_box2{
+    position: relative;
+    background-color: var(--secondary_higtlight);
+}
+.textbox{
+    position: absolute;
+   
+    bottom: 65px;
+    left: 50px;
+    z-index: 10;
+
+}
+.textbox2{
+    background-color: var(--yellow);
+    position: absolute; 
+    bottom: 55px;
+    left: 65px;
+    z-index: 10;
+    width: 125px;
+    height: 45px;
+    text-align: center;
+}
+.textbox2 a{
+    position: relative;
+    top: 10px;
+}
+
+
+.frontpage__pics_box img{
+
+height: 262.5px;
+}
