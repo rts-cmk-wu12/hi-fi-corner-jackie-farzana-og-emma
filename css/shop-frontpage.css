@@ -1,0 +1,156 @@
+body{
+    background-color: black; 
+}
+.frontpage__pics{
+    display: grid;
+   
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    width: fit-content;
+    margin: 0 auto; 
+    
+}
+
+
+
+
+
+
+.frontpage__pics_box{
+    position: relative;
+    max-width: 262.5px;
+}
+.frontpage__pics_box2{
+    position: relative;
+    background-color: var( --primary_hihglight);
+}
+
+.textbox{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    
+    bottom: 100px;
+    left: 75px;
+   
+
+}
+.tv{
+    position: absolute;
+    bottom: 100px;
+    left: 105px;
+    
+    color: black;
+    font-size: 25px;
+}
+.ceiling, .outlet{
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    z-index: 10;
+    color: white;
+    font-size: 25px;
+}
+.ebay{
+    color: black;
+}
+.textbox2{
+    background-color: #5c5237;
+    position: absolute; 
+    bottom: 85px;
+    left: 30px;
+    z-index: 10;
+    width: 200px;
+    height: 65px;
+    text-align: center;
+}
+.textbox2 a{
+    position: relative;
+    top: 19px;
+    color:white ;
+    font-size: 25px;
+}
+
+
+.frontpage__pics_box img{
+width: 262.5px;
+height: 100%;
+
+}
+#xmark-nav{
+    display: none;
+
+ }
+@media screen and (max-width:1065px){
+    .frontpage__pics{
+        grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(4, auto);
+width: fit-content;
+gap: 75px;
+    }
+    footer{
+        display: none; 
+     }
+    .header__top{
+        display: none;
+    }
+}
+@media screen and (max-width:625px){
+    .frontpage__pics{
+        gap: 0;
+        grid-template-columns: repeat(1, 1fr);
+grid-template-rows: repeat(4, auto);
+    }
+    .frontpage__pics_box2{
+height: 267.5px;
+    }
+    nav{
+        height: 100%;
+        position: fixed;
+        background-color: black;
+       display: grid;
+       align-items: center;
+       z-index: 10;
+       padding-top: 4%;
+    }
+    
+
+      /* height 100vh så den ul fylder hele siden(samme med width) */
+    nav ul {
+        display: none;
+justify-items: center;
+width: 100vw;
+margin-bottom: 34em;
+
+height: 100vh;
+
+    }
+
+    /* height + og margin 10% så alle li passer ind i nav ul */
+    nav ul li{
+        grid-column: 1/-1;
+        height: 0;
+   
+
+    }
+
+/* vi bruger ID her så vi ik ender op med at de to javascripts og classes går ind over hindanden */
+    #xmark-nav{ 
+        display: grid;
+        position:fixed;
+            top: 5vw;
+            right: 5vw;
+            font-size: 2em;
+            z-index: 40;
+            color: orange;
+
+    }
+    .frontpage__pics_box{
+        z-index: 1;
+    }
+    .textbox2{
+        z-index: 1;
+    }
+}

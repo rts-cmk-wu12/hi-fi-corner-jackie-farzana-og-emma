@@ -1,0 +1,291 @@
+.hero{
+    background-image: url('/images/background/speaker.jpg');
+    height: 750px;
+    object-fit: cover;
+}
+
+.wavy_lines{
+    background-image: url('/images/background/wavy_lines.jpg');
+    min-height: 500px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+a, .fa-cart-shopping, .fa-user{
+    color: aliceblue;
+}
+
+
+.wavy_lines_title{
+ margin: 0 auto;
+
+font-size: 43px;
+
+}
+.main_top_image--hifi_logo{
+    display: grid;
+    margin: 0 auto;
+    width: 250px;
+    align-self: center;
+    margin-top: 50px;
+}
+.main_top_image--hifi_logo:hover{
+    transform: scale(1.2);
+}
+.main_top_image--hifi_logo{
+    transition: .3s;
+}
+
+/* slider */
+.gallery-grid, .slider-grid{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    }
+    
+    .gallery-grid{
+       max-width: 98.9vw;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 7em 0 3.5em;
+    }
+    
+    .slider-grid{
+        grid-column: 2/3;
+        grid-template-columns: repeat(1, auto);
+    }
+    .slider{
+        width: 98.9vw;
+        grid-area: 1/1/2/-1;
+        overflow: hidden;
+        order: 1;
+       height: 750px;
+    
+    }
+    .slider img{
+        /* object-fit: cover; */
+        width: 80%;
+          height: 100%;  
+        margin: 0 auto;
+    }
+    .slide{
+        display: none;
+        
+    }
+    .slide--active{
+        display: block;
+        order: 2;
+       
+    }
+    .caption{
+        font-size: 20px;
+        line-height: 1.6;
+        align-self: end;
+        width: 14.6em;
+        grid-column: 3/4;
+    }
+    
+    #next,#back{
+        grid-area: 1/1/2/-1;
+        font-size: 4.5em;
+        margin: 0.5em;
+        cursor: pointer;
+        color: var(--primary_hihglight);
+        order: 3;
+    }
+    
+    #next{
+        justify-self: end;
+    }
+    
+    #back{
+        justify-self: start;
+    }
+   
+    .fa-chevron-right,.fa-chevron-left{
+        margin-top: 150px;
+        
+    }
+    #back:hover{
+        transform: scale(1.2);
+    }
+    #next:hover{
+        transform: scale(1.2);
+    }
+    #next{
+        transition: .3s;
+    }
+    
+    #back{
+        transition: .3s;
+    }
+    .caption{
+        font-size: 30px;
+        color: var(--primary_hihglight);
+        padding-left: 25px;
+        padding-bottom: 25px;
+    }
+
+    .sociale-medier{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    }
+    .sociale-medier-div{
+        width: 100%;
+        display: grid;
+        
+
+    }
+ .sociale-medier-div img{
+   width:100% ; 
+ }
+ .sociale-medier-div a, .sociale-medier-div img{
+    grid-row: 1/2;
+    grid-column: 1/2;
+ }
+ .sociale-medier-div a{
+    margin: 0 auto;
+    font-size: 200px;
+    align-self: center;
+    transition: .3s;
+ }
+ .sociale-medier-div a:hover{
+    transform: scale(1.17);
+ }
+ .buttons{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    margin: 0 auto;
+    gap: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    justify-content: center;
+    
+ }
+ 
+ .shop-around{
+    background-color: rgb(29, 28, 28);
+ }
+
+.buttons div{
+    width: 100%;
+    text-align: center;
+}
+.buttons div p{
+color: white;
+min-width: 250px;
+}
+.buttons div button{
+    width: fit-content;
+    background-color: var(--opacity_black);
+    color: var(--primary_hihglight);
+    margin-bottom: 10px;
+    border-color: white;
+    border-width: 0.1px;
+    transition: .3s;
+    
+}
+.buttons div button:hover{
+    transform: scale(1.17);
+}
+
+#xmark-nav{
+    display: none;
+
+ }
+
+@media screen and (max-width:960px){
+  
+    .buttons{
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+    }
+    footer{
+        display: none; 
+     }
+    .header__top{
+        display: none;
+    }
+    .sociale-medier-div a{
+        font-size: 100px;
+    }
+    .caption{
+        margin: 0 auto;
+    }
+    .slider{
+        text-align: center;
+    }
+    .slider img{
+        width: auto;
+    }
+    .gallery-grid{
+        padding: 0;
+    }
+    
+    } 
+    @media screen and (max-width:588px){
+        nav{
+            height: 100%;
+            position: fixed;
+            background-color: black;
+           display: grid;
+           align-items: center;
+           z-index: 10;
+           padding-top: 4%;
+        }
+        
+    
+          /* height 100vh så den ul fylder hele siden(samme med width) */
+        nav ul {
+            display: none;
+    justify-items: center;
+    width: 100vw;
+    margin-bottom: 34em;
+    
+    height: 100vh;
+    
+        }
+    
+        /* height 0 + og margin 10% så alle li passer ind i nav ul */
+        nav ul li{
+            grid-column: 1/-1;
+            height: 0;
+       
+    
+        }
+
+    /* vi bruger ID her så vi ik ender op med at de to javascripts og classes går ind over hindanden */
+        #xmark-nav{ 
+            display: grid;
+            position:fixed;
+                top: 5vw;
+                right: 5vw;
+                font-size: 2em;
+                z-index: 40;
+                color: orange;
+    
+        }
+        
+        .main_top_image--hifi_logo{
+            display: none;
+        }
+        .hero{
+            height: 0;
+        }
+        .caption{
+            padding-left: 0;
+            padding-right: 50px;
+            display: block;
+        }
+        .slider, .slider-grid{
+            display: none;
+        }
+        .buttons div p{
+          min-width: 0;
+          width: 100%;
+        }
+    }

@@ -1,0 +1,237 @@
+@import url(variabler.css);
+p{
+    cursor: pointer;
+}
+body{
+    background-color: black;
+}
+main{
+    padding:2em;
+    background-color: white;
+}
+#category-page {
+    display: grid;
+    /*grid-template-columns: auto auto auto auto auto;*/
+    grid-template-columns: repeat(
+        auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+}
+
+.category-page__mid {
+    grid-column: 2/ span 3;
+}
+
+
+.category-page__left {
+    height: fit-content;
+}
+.category-page__left-category{
+    background-color: var(--primary_gray);
+
+}
+.category-page__left_ul{
+    padding: 1rem;
+}
+.category-page__left_ul_li{
+    list-style: none;
+    color: var(--primary_hihglight);
+    line-height: 2rem;
+    text-transform: uppercase;
+}.category-page__left_ul_li:hover{
+    text-decoration: underline;
+}
+
+.category-page__left-shop_by{
+    background-color: var(--primary_gray);
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.category-page__left-headline{
+    color: var(--primary_hihglight);
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+.category-page__left-filter{
+    margin-bottom: .5rem;
+
+}
+.category-page__left__ul-shop_by-price{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    
+}
+.category-page__left__li-shop_by-price{
+    list-style: none;
+    color: var(--primary_hihglight);
+    line-height: 1.3rem;
+}.category-page__left__li-shop_by-price:hover{
+    text-decoration: underline;
+}
+
+.category-page__left__ul-shop_by-manufacturer{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.category-page__left__li-shop_by-manufacturer{
+    list-style: none;
+    color: var(--primary_hihglight);
+    line-height: 1.3rem;
+    text-transform: capitalize;
+    
+}.category-page__left__li-shop_by-manufacturer:hover{
+    text-decoration: underline;
+
+}
+
+
+.category-page__search{
+    height:70px;
+    background-color:var(--primary_gray) ;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+}
+.category-page__search-view_as{
+    display: flex;
+}
+
+.grid_icon-gold, .row_icon-white{
+    height: 1rem;
+    width: auto;
+    margin: .2rem;
+    cursor: pointer;
+}
+
+.category-page__show{
+    display: flex;
+    
+}
+
+.category-page__heading{
+font-weight: bold;
+margin-bottom: 1em;
+
+}
+.page-name{
+    margin-bottom: 1.5em;
+}
+#cursor{
+    cursor: default;
+}
+.text-brown{
+    color: var(--primary_hihglight);
+    cursor: pointer;
+}
+.uppercase{
+    text-transform: uppercase;   
+    cursor: default;
+}
+#extra-list{
+    display: none;
+}
+.extra-list, .list{
+    list-style: none;
+}
+
+/* product list */
+.product {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product button {
+    margin-top: 8px;
+    padding: 4px 8px;
+    background-color:var(--primary_hihglight);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(150px, 1fr));
+
+
+    gap:1.5em;
+}
+@media screen and (max-width:960px){
+    footer, .header__top{
+       display: none; 
+    }
+}
+@media screen and (max-width:588px){
+    nav{
+        height: 100%;
+        position: fixed;
+        background-color: black;
+       display: grid;
+       align-items: center;
+       z-index: 10;
+       padding-top: 4%;
+    }
+    
+
+    /* height 100vh så den ul fylder hele siden(samme med width) */
+    nav ul {
+        display: none;
+justify-items: center;
+width: 100vw;
+margin-bottom: 34em;
+
+height: 100vh;
+
+    }
+
+    /* height + og margin 10% så alle li passer ind i nav ul */
+    nav ul li{
+        grid-column: 1/-1;
+        height: 0;
+   
+
+    }
+
+/* vi bruger ID her så vi ik ender op med at de to javascripts og classes går ind over hindanden */
+    #xmark-nav{ 
+        display: grid;
+        position:fixed;
+            top: 5vw;
+            right: 5vw;
+            font-size: 2em;
+            z-index: 40;
+            color: orange;
+
+    }
+    .main_top{
+        display:block;
+        margin-top: 0;
+    }
+   
+    .main_bottom_container-white{
+        padding: 0;
+    }
+    .category-page__search{
+        display: none;
+    }
+    .category-page__heading{
+        display: none;
+    }
+    .category-page__left{
+        display: none;
+    }
+    #category-page{
+       display: block;
+    }
+    .product{
+        font-size: 12px;
+    }
+    
+}
+

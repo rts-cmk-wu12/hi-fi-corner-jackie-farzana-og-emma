@@ -1,0 +1,206 @@
+.background{
+    background-image: url(/images/background/headphones.jpg);
+    background-size: cover;
+    
+}
+main{
+    padding: 2rem;
+}
+.fa-bars{
+    display: none;
+}
+.cart__container{
+    display: flex;
+    margin: 0 auto;
+
+    background-color: var(--opacity_black);
+    backdrop-filter: blur(10px);
+    
+    width: 80%;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+ .cart__container-items__list-wrapper{
+    border-right: solid 1px var(--primary_gray);
+    padding-right: 1rem;
+
+    color: var(--primary_gray);
+    width: 50%;
+}
+.cart__container-items__list-container{
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom: solid 1px var(--primary_gray);
+    padding-bottom: 1rem;
+    
+    text-align: left;
+}
+.cart__container-items__list-product__image-container{
+    height: 8rem;
+    width: 8rem;
+    margin-top: .2rem;
+
+}
+.cart__container-items__list-product__image-container img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    
+ 
+}
+.price__and__button-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.remove__button{
+    border-radius: 1rem;
+    background-color: var(--opacity_black);
+    border: solid 2px var(--primary_gray);
+    color: var(--primary_gray);
+    margin: .5rem;
+    cursor: pointer;
+}
+/*  */
+
+.cart__container-items__list-total__price__container{
+    border-top: solid 1px var(--primary_gray);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.price__and__icon{
+    display: flex;
+}
+
+.cart__container-pay-wrapper{
+    width: 50%;
+}
+
+.cart__container-pay-container{
+   margin-left: 1rem;
+}
+
+.cart__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__form label{
+    color: var(--primary_gray);
+}
+
+.cart__form input{
+    margin-bottom: 1rem;
+    height: 1.5rem;
+
+    border: none;
+    border-radius: .2rem;
+    
+    background-color: var(--primary_gray);
+}
+.cart__container-pay-container-button{
+    border: solid 2px var(--primary_gray);
+    background-color: var(--opacity_black);
+    color: var(--primary_gray);
+    padding: .5rem;
+    width: 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/*  */
+
+.dialog{
+    margin: 0 auto;
+     padding: none;
+     margin-top: 45vh;
+     
+     border-radius: 1rem;
+     border: solid var(--primary_gray) 2px;
+     background-color: black;
+     color: var(--primary_gray);
+ }
+ .dialog::backdrop{
+     background-color: var(--opacity_black);
+     backdrop-filter: blur(4px);
+ }
+
+ /*  */
+
+@media screen and (max-width:960px){
+    footer, .header__top{
+       display: none; 
+    }
+    .fa-bars{
+        display: none;
+    }
+}
+@media screen and (max-width:588px){
+    nav{
+        height: 100%;
+        position: fixed;
+        background-color: black;
+       display: grid;
+       align-items: center;
+       z-index: 10;
+       padding-top: 4%;
+    }
+    
+
+      /* height 100vh så den ul fylder hele siden(samme med width) */
+    nav ul {
+        display: none;
+justify-items: center;
+width: 100vw;
+margin-bottom: 34em;
+
+height: 100vh;
+
+    }
+
+    /* height 0 + og margin 10% så alle li passer ind i nav ul */
+    nav ul li{
+        grid-column: 1/-1;
+        height: 0;
+    
+
+    }
+
+/* vi bruger ID her så vi ik ender op med at de to javascripts og classes går ind over hindanden */
+    #xmark-nav{ 
+        display: grid;
+        position:fixed;
+            top: 5vw;
+            right: 5vw;
+            font-size: 2em;
+            z-index: 40;
+            color: orange;
+
+    }
+    .main_top{
+        display:block;
+        margin-top: 0;
+    }
+    .backdrop,.background{
+        
+        padding: 0;
+    }
+    .main_bottom_container-white{
+        padding: 0;
+    }
+    .background{
+        height: 100%;
+        margin-bottom: 0;
+    }
+  .main_top img{
+    display: none;
+  }
+
+}
+
+
